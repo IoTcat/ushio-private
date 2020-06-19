@@ -1,0 +1,20 @@
+{"servers":
+	[
+		{
+			"username": "cn.yimian.xyz",
+			"name": "cn.yimian.xyz",
+			"type": "xen",
+			"host": "cn.yimian.xyz",
+			"location": "cn",
+			"password": "USER_DEFAULT_PASSWORD"
+		},
+		{
+			"username": "uk.yimian.xyz",
+			"name": "uk.yimian.xyz",
+			"type": "xen",
+			"host": "uk.yimian.xyz",
+			"location": "uk",
+			"password": "USER_DEFAULT_PASSWORD"
+		}
+	]
+}

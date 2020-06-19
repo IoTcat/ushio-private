@@ -1,0 +1,133 @@
+version: '3'
+services:
+  nginx:
+    image: iotcat/ushio-nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/mnt/etc/cn.yimian.xyz/nginx/:/etc/nginx/"
+      - "/mnt/:/mnt/"
+      - "/var/log/nginx/:/var/log/nginx/"
+      - "/home/www/:/home/www/"
+    #network_mode: "host"
+    depends_on:
+      - oneindex
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    volumes:
+      - "/tmp/redis/data/:/data/"
+    ports:
+      - "6379:6379"
+    networks:
+      - default
+      - inner
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    volumes:
+      - "/var/mongo:/data/db"
+  php-fpm:
+    container_name: php-fpm
+    image: crunchgeek/php-fpm:7.3
+    volumes:
+      - "/home/:/home/"
+      - "/mnt/:/mnt/"
+  emqx:
+    image: emqx/emqx
+    container_name: emqx
+    restart: always
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8883:8883"
+      - "8084:8084"
+      - "18083:18083"
+    networks:
+      - inner
+      - default
+  serverstatus:
+    image: cppla/serverstatus
+    container_name: serverstatus
+    volumes:
+      - "/mnt/config/serverstatus/config.json:/ServerStatus/server/config.json"
+    ports:
+      - "35601:35601"
+  monitor:
+    #build: https://github.com/iotcat/ushio-monitor.git
+    image: iotcat/ushio-monitor
+    container_name: monitor
+    command: USER=cn.yimian.xyz
+    network_mode: "host"
+    restart: always
+  oneindex:
+    image: iotcat/oneindex
+    container_name: oneindex
+    volumes:
+      - "/mnt/config/oneindex/:/var/www/html/config/"
+  session:
+    #build: https://github.com/iotcat/ushio-session.git
+    image: iotcat/ushio-session
+    container_name: session
+    networks:
+      - default
+  ushio-win-server:
+    #build: https://github.com/iotcat/ushio-win-server.git
+    image: iotcat/ushio-win-server
+    container_name: ushio-win-server
+  kms:
+    #build: https://github.com/iotcat/kms-dockcer.git
+    image: iotcat/kms
+    container_name: kms
+    ports:
+      - "1688:1688"
+  acg.watch-api:
+    #build: https://github.com/iotcat/acg.watch-api.git
+    image: iotcat/acg.watch-api
+    container_name: acg.watch-api
+    volumes:
+      - "/mnt/cache/video/:/mnt/cache/video/"
+  danmaku-api:
+    #build: https://github.com/iotcat/danmaku-api.git
+    image: iotcat/danmaku-api
+    container_name: danmaku-api
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      REDIS_HOST: "redis"
+      REDIS_PORT: 6379
+      MONGO_HOST: "mongo"
+      MONGO_PORT: 27017
+      MONGO_DATABASE: "danmaku"
+    volumes:
+      - /var/log/danmaku-api/app:/usr/src/app/logs
+      - /var/log/danmaku-api/pm2:/root/.pm2/logs
+  coro-api:
+    #build: https://github.com/iotcat/coro-api.git
+    image: iotcat/coro-api
+    container_name: coro-api
+  todo-ddl-api:
+    #build: https://github.com/iotcat/todo-ddl-api.git
+    image: iotcat/todo-ddl-api
+    container_name: todo-ddl-api
+    volumes:
+      - "/mnt/var/todo-ddl/:/mnt/var/todo-ddl/"
+  upload-api:
+    #build: https://github.com/IoTcat/upload-api.git
+    image: iotcat/upload-api
+    container_name: upload-api
+    volumes:
+      - "/mnt/config/token/huaweicloud/:/mnt/config/token/huaweicloud/"
+    tmpfs:
+      - /tmp
+networks:
+  default:
+
+  inner:
+
