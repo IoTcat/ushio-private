@@ -1,0 +1,345 @@
+{
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 10808,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "4d7a6602-177f-4026-8259-a25e64fa20ae",
+                        "alterId": 233
+                    },
+                    {
+                        "id": "de318661-6d29-44ea-b947-22818e80e824",
+                        "alterId": 233
+                    },
+                    {
+                        "id": "c2336235-a999-4309-962c-a9a90d870e45",
+                        "alterId": 233
+                    },
+                    {
+                        "id": "a4cbf297-de0a-4a26-820c-3796310db19a",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "45b78677-8df1-43ce-a936-4e5e275b6c69",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "1ed7e57d-8baf-492d-9bde-e315491cc579",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "0604a2e8-0116-4733-8939-98e2c10250a1",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "55e8258f-3b93-4ba6-bc90-582e1f6498b5",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "cbd443ce-7509-4cdd-9837-27057d08ce01",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "14799bed-2b87-4c5a-b830-5e8bc160e5b6",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "7eb1038e-efc7-427e-8f51-50c999879c89",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "1a379862-abdd-4323-bf38-4a4aa2eb0ac6",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "43cb0d38-b379-4316-aa29-e2dd0961d6f0",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "45647a62-fef1-4c31-9a82-597beacdf669",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "31bda9c1-efed-4ae9-9532-e896227e9b1c",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "4b207e40-c14f-4686-a4db-1686d9e229df",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "9d297c40-7bd2-42a1-87f1-c34a76a2362b",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "a5b44ef5-cc69-427c-9b09-504743136418",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "6dfacb32-f971-4b6b-aeb2-1385e8a4d9fe",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "518cbbeb-f1c7-4097-86c5-716748a874a7",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "cf616d8e-e1ff-4332-ae01-6ae8063cb958",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "298da642-41d5-4958-aeca-7b9d07d87178",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "72784ce9-6504-4bd0-bd1f-7d82b60c2950",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "fd1a8183-ca51-4db9-b021-c262b077234b",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "92ad449b-be68-404c-a34b-5383fb251319",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "369e504f-710b-4246-b009-eb7756cf92b5",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "5bb3b019-acb7-407a-9895-bb824c5f5158",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "ebbd7294-9b25-4ebe-bb12-3bf112512caa",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "3fc7c4fe-a08d-41bd-be0e-1aac56959803",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "f8fe6e74-5df7-49f1-95ca-25bb6456ce51",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "96037799-06bc-4654-b03f-c1bd21f06150",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "7744abb3-e677-4fdd-8605-cc69ec1193d2",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "5b821db8-0988-4ecc-bcaf-21971bcc6e34",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "ff61445e-7d64-4ec8-b50b-57df365d7283",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "e4d30dfd-4d3a-40ba-9fa1-d2cface634d9",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "1cd40c69-6d32-48c8-9479-703deac20bc0",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "b203abad-793c-460c-80e9-100652ea36ef",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "e3de7a26-a66c-4c67-bee0-66b972b0e899",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "3a562c01-09dd-4d99-984b-9eccf5a520ce",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "dcbe82bb-7ae9-4279-ba01-c1db2e310766",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "545a5c41-033a-4faf-881a-ef35cc647a69",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "8fb26ba7-b4d8-4f0b-b974-4f565a515845",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "98558c60-b523-40d2-911d-f26fc5dbd1ac",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "52e8cbd8-78d4-41fa-803d-415d1253bf3c",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "abb944dd-d927-4e8d-9767-47496a5e20d9",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "2617e624-1f4f-4445-9490-699c3d70a3b7",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "f2445a99-3303-4bfc-a9af-c5c86f9132f8",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "d9072c92-fcca-4793-a162-d660b00ef89b",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "fb517061-eef0-41bb-a852-827f6b45a531",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "e617167d-1016-4730-8018-fa0f7ebb5ab1",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "cd0e6d1c-6c45-4cd2-893b-948d7428e531",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "1aaea834-e673-41eb-93a4-83bbfb9d1c5a",
+                        "alterId": 88
+                    },
+                    {
+                        "id": "8c25c3ef-a130-4ff1-b395-3299d10ae69a",
+                        "alterId": 88
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws"
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIP"
+            },
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        },
+        {
+            "protocol": "mtproto",
+            "settings": {},
+            "tag": "tg-out"
+        }
+    ],
+    "dns": {
+        "servers": [
+            "https+local://cloudflare-dns.com/dns-query",
+            "1.1.1.1",
+            "1.0.0.1",
+            "8.8.8.8",
+            "8.8.4.4",
+            "localhost"
+        ]
+    },
+    "routing": {
+        "domainStrategy": "IPOnDemand",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "0.0.0.0/8",
+                    "10.0.0.0/8",
+                    "100.64.0.0/10",
+                    "127.0.0.0/8",
+                    "169.254.0.0/16",
+                    "172.16.0.0/12",
+                    "192.0.0.0/24",
+                    "192.0.2.0/24",
+                    "192.168.0.0/16",
+                    "198.18.0.0/15",
+                    "198.51.100.0/24",
+                    "203.0.113.0/24",
+                    "::1/128",
+                    "fc00::/7",
+                    "fe80::/10"
+                ],
+                "outboundTag": "blocked"
+            },
+            {
+                "type": "field",
+                "inboundTag": [
+                    "tg-in"
+                ],
+                "outboundTag": "tg-out"
+            },
+            {
+                "type": "field",
+                "domain": [
+                    "domain:epochtimes.com",
+                    "domain:epochtimes.com.tw",
+                    "domain:epochtimes.fr",
+                    "domain:epochtimes.de",
+                    "domain:epochtimes.jp",
+                    "domain:epochtimes.ru",
+                    "domain:epochtimes.co.il",
+                    "domain:epochtimes.co.kr",
+                    "domain:epochtimes-romania.com",
+                    "domain:erabaru.net",
+                    "domain:lagranepoca.com",
+                    "domain:theepochtimes.com",
+                    "domain:ntdtv.com",
+                    "domain:ntd.tv",
+                    "domain:ntdtv-dc.com",
+                    "domain:ntdtv.com.tw",
+                    "domain:minghui.org",
+                    "domain:renminbao.com",
+                    "domain:dafahao.com",
+                    "domain:dongtaiwang.com",
+                    "domain:falundafa.org",
+                    "domain:wujieliulan.com",
+                    "domain:ninecommentaries.com",
+                    "domain:shenyun.com"
+                ],
+                "outboundTag": "blocked"
+            },
+            {
+                "type": "field",
+                "protocol": [
+                    "bittorrent"
+                ],
+                "outboundTag": "blocked"
+            }
+        ]
+    },
+    "transport": {
+        "kcpSettings": {
+            "uplinkCapacity": 100,
+            "downlinkCapacity": 100,
+            "congestion": true
+        }
+    }
+}

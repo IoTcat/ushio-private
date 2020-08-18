@@ -1,0 +1,159 @@
+version: '3'
+services:
+
+# system-level services
+#--------------------------------
+  nginx:
+    image: iotcat/ushio-nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/mnt/etc/usa.yimian.xyz/nginx/:/etc/nginx/"
+      - "/mnt/:/mnt/"
+      - "/var/log/nginx/:/var/log/nginx/"
+      - "/home/www/:/home/www/"
+    #network_mode: "host"
+    depends_on:
+      - oneindex
+      - php-fpm
+      - frps
+      - ushio-proxy
+    networks:
+      - default
+      - php_net
+      - frp_net
+
+  dns:
+    image: strm/dnsmasq
+    restart: always
+    volumes:
+      - /mnt/config/dnsmasq/dnsmasq.conf:/etc/dnsmasq.conf
+      - /mnt/config/dnsmasq/dnsmasq.d/:/etc/dnsmasq.d/
+      - /mnt/config/dnsmasq/hosts.conf:/etc/hosts.conf
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    cap_add:
+      - NET_ADMIN
+    networks:
+      - dns_net
+
+# Database
+#----------------------------------
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    volumes:
+      - "/tmp/redis/data/:/data/"
+    networks:
+      - redis_net
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    volumes:
+      - "/var/mongo:/data/db"
+    networks:
+      - mongo_net
+
+
+# app-level services
+# --------------------------------------
+  php-fpm:
+    container_name: php-fpm
+    image: crunchgeek/php-fpm:7.3
+    restart: always
+    volumes:
+      - "/home/:/home/"
+      - "/mnt/:/mnt/"
+    networks:
+      - php_net
+  frps:
+    image: snowdreamtech/frps
+    container_name: frps
+    restart: always
+    volumes:
+      - "/mnt/config/frp/frps.ini:/etc/frp/frps.ini"
+    ports:
+      - "4480:4480"
+      - "4443:4443"
+      - "4477:4477"
+      - "4400-4440:4400-4440"
+    networks:
+      - frp_net
+  monitor:
+    #build: https://github.com/iotcat/ushio-monitor.git
+    image: iotcat/ushio-monitor
+    container_name: monitor
+    restart: always
+    command: USER=usa.yimian.xyz
+    network_mode: "host"
+
+
+  redrange:
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db.yimian.xyz:3306
+      WORDPRESS_DB_USER: redrange
+      WORDPRESS_DB_PASSWORD: redrange3@25
+      WORDPRESS_DB_NAME: redrange
+
+# common apps
+# -------------------------------------
+  oneindex:
+    image: iotcat/oneindex
+    container_name: oneindex
+    restart: always
+    volumes:
+      - "/mnt/config/oneindex/:/var/www/html/config/"
+
+
+
+# local apps
+# ---------------------------------------
+  kms:
+    #build: https://github.com/iotcat/kms-dockcer.git
+    image: iotcat/kms
+    container_name: kms
+    restart: always
+    ports:
+      - "1688:1688"
+
+  v2ray:
+    image: v2ray/official
+    container_name: v2ray
+    restart: always
+    volumes:
+      - "/mnt/config/v2ray/:/etc/v2ray/"
+      - "/var/log/v2ray/:/var/log/v2ray/"
+
+  ushio-proxy:
+    #build: https://github.com/iotcat/ushio-proxy.git
+    image: iotcat/ushio-proxy
+    container_name: ushio-proxy
+    restart: always
+
+    
+# networks setting
+# ------------------------------------
+networks:
+  default:
+
+  dns_net:
+
+  redis_net:
+
+  mongo_net:
+
+  php_net:
+
+  frp_net:
+
+  mqtt_net:

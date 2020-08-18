@@ -3,17 +3,33 @@
 		{
 			"username": "cn.yimian.xyz",
 			"name": "cn.yimian.xyz",
-			"type": "xen",
+			"type": "vps",
 			"host": "cn.yimian.xyz",
-			"location": "cn",
+			"location": "cn-Beijing",
 			"password": "USER_DEFAULT_PASSWORD"
 		},
 		{
-			"username": "uk.yimian.xyz",
-			"name": "uk.yimian.xyz",
-			"type": "xen",
-			"host": "uk.yimian.xyz",
-			"location": "uk",
+			"username": "cn2.yimian.xyz",
+			"name": "cn2.yimian.xyz",
+			"type": "vps",
+			"host": "cn2.yimian.xyz",
+			"location": "cn-Shenzhen",
+			"password": "USER_DEFAULT_PASSWORD"
+		},
+		{
+			"username": "usa.yimian.xyz",
+			"name": "usa.yimian.xyz",
+			"type": "vps",
+			"host": "usa.yimian.xyz",
+			"location": "usa-LosAngeles",
+			"password": "USER_DEFAULT_PASSWORD"
+		},
+        {
+			"username": "home.yimian.xyz",
+			"name": "home.yimian.xyz",
+			"type": "laptop",
+			"host": "home.yimian.xyz",
+			"location": "cn-Taian",
 			"password": "USER_DEFAULT_PASSWORD"
 		}
 	]

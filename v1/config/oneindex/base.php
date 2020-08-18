@@ -23,12 +23,12 @@
     ),
     'video5' => 
     array (
-      0 => 'mp4',
-      1 => 'webm',
-      2 => 'mkv',
+      0 => 'webm',
+      1 => 'mkv',
     ),
     'video' => 
     array (
+      0 => 'mp4',
     ),
     'video2' => 
     array (
@@ -62,6 +62,7 @@
       8 => 'txt',
       9 => 'sh',
       10 => 'md',
+      11 => 'service',
     ),
     'doc' => 
     array (
@@ -102,5 +103,5 @@
   'redirect_uri' => 'https://oneindex.github.io/',
   'refresh_token' => 'MCWFxng8w8CUx94zcDDv5lesd3IFUva8Xkk3yhHvTWm2MQyU*TGZuX4bziDPJvu2yNEV6ZV7cFseIhG3JvVf8PvclhgiJ!xVk9PAlExuFXjb2Re6QQgiW6bdjCuCBvHoMs!QrZtb6gPzzs0ZT2*TJ!L2asGERfJ1KyM7WypfBxQQY0DwDZPXZFyDFXAizhHVYxZyHBu*vW!G!dVKZ2tJ3ZNLYXic*UOEomNMr*Rit!ksgK!9u!BCbUS0fgZFlN03ythp3HQd4XtUguimwvQhkqLm1We2JkfXYnB2fOVbtmY!p0hnMj3IH1ae54tZanYMI6PbSjRm4a1O*awcvcVS1ehJxI5thDhoNTn4emyamX398k!WYkVjiwBUaAh6kE6*yww$$',
   'onedrive_hide' => '',
-  'onedrive_hotlink' => '*.yimian.xyz;acg.watch',
+  'onedrive_hotlink' => '',
 );

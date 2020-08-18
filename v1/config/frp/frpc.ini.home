@@ -1,0 +1,19 @@
+[common]
+server_addr = usa.yimian.xyz
+server_port = 4477
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 4400
+
+[web_home]
+type = http
+local_port = 80
+custom_domains = home.yimian.xyz
+
+[v_china]
+type = https
+local_port = 443
+custom_domains = v-china.yimian.xyz
