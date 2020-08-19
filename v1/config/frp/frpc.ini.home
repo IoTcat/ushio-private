@@ -13,6 +13,11 @@ type = http
 local_port = 80
 custom_domains = home.yimian.xyz
 
+[docker_yimian]
+type = https
+local_port = 5000
+custom_domains = docker.yimian.xyz
+
 [v_china]
 type = https
 local_port = 443

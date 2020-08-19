@@ -58,6 +58,18 @@ services:
 # local apps
 # ---------------------------------------
   
+  registry:
+    image: usa.yimian.xyz:5000/registry:2
+    container_name: registry
+    restart: always
+    environment:
+      - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/yimian.xyz.crt
+      - REGISTRY_HTTP_TLS_KEY=/certs/yimian.xyz.key
+    ports:
+      - 5000:5000
+    volumes:
+      - "/mnt/config/ssl/yimian.xyz:/certs"
+      - "/var/docker:/var/lib/registry"
 
 
 
