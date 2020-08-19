@@ -1,0 +1,9 @@
+[submodule "etc"]
+	path = etc
+	url = git@github.com:IoTcat/ushio-etc.git
+[submodule "config"]
+	path = config
+	url = git@github.com:IoTcat/ushio-config.git
+[submodule "docker"]
+	path = docker
+	url = git@github.com:IoTcat/ushio-docker.git
