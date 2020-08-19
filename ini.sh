@@ -1,6 +1,6 @@
 #!/bin/bash
 cd $(dirname $0)
-rm -f /mnt
+rm -rf /mnt
 ln -s $(pwd) /mnt
 sh ./update.sh
 sh ./etc/common/init.sh
