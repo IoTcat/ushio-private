@@ -1,2 +1,3 @@
 #!/bin/bash
-ln -s $(dirname $0) /mnt
+cd $(dirname $0)
+ln -s $(pwd) /mnt
