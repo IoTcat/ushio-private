@@ -59,7 +59,7 @@ services:
 # ---------------------------------------
   
   registry:
-    image: usa.yimian.xyz:5000/registry:2
+    image: docker.yimian.xyz/registry
     container_name: registry
     restart: always
     environment:
